@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Source+Serif+Pro:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
 <body>
     <div class="app-container">
-        <h2 class="app-name">Lenny's Weather App</h2>
+        <h2 class="app-name">Weather App</h2>
         <div class="top">
             <input type="text" id="search" placeholder="Enter a location">
             <button id="go">GO</button>
         </div>
         <div class="middle">
             <div class="img-container">
-                <h4 class="location-header">None</h4>
+                <h4 class="location-header">New York</h4>
                 <img src="/weather-icons-master/svg/wi-day-sunny.svg" alt="">
                 <p id="condition">Cloudy</p>
             </div>
@@ -24,7 +27,7 @@
         <div class="bottom">
             <div class="weather-info">
                 <div style="display: grid;">
-                    <p id="temp">Temperature: 0</p>
+                    <p id="temp">Temperature:0</p>
                     <p id="wind">Wind: 0</p>
                     <p id="humidity">Humidity: 0</p>
                 </div>
