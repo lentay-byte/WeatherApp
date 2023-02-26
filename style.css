@@ -1,0 +1,57 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.app-container {
+    border: solid 4px black;
+    border-radius: 15px;
+    width: 50%;
+    margin: 40px auto;
+    background-color: aliceblue;
+}
+
+.app-name{
+    text-align: center;
+    text-transform: capitalize;
+    padding: 15px 0;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search {
+    padding: 5px;
+    width: 70%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#go{
+    padding: 5px;
+}
+
+.location-header{
+    font-size: xx-large;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#condition {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.weather-info div{
+    padding: 10px;
+}
+
+.weather-info div p{
+    padding: 5px;
+}
+
+
