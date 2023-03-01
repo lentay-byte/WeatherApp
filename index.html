@@ -12,24 +12,39 @@
 </head>
 <body>
     <div class="app-container">
-        <h2 class="app-name">Weather App</h2>
+        <h2 class="app-name">WEATHER APP?</h2>
         <div class="top">
-            <input type="text" id="search" placeholder="Enter a location">
+            <input type="text" id="search" placeholder="ENTER A LOCATION">
             <button id="go">GO</button>
         </div>
         <div class="middle">
+            <div class="date-toggle" style="display: flex;">
+                <div class="date-box">
+                    <p id="day"></p>
+                    <p id="date"></p>
+                </div>
+                <div class="toggle-box">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <p>&degF/&degC</p>
+                </div>
+            </div>
             <div class="img-container">
-                <h4 class="location-header">New York</h4>
-                <img src="/weather-icons-master/svg/wi-day-sunny.svg" alt="">
-                <p id="condition">Cloudy</p>
+                <h4 class="location-header"><strong>...</strong></h4>
+                <div class="temperature">
+                    <p id="tempVal" style="display: inline-block;">0</p>
+                    <p id="tempMeasurement" style="display: inline-block;">&degF</p>
+                </div>
+                <p id="condition">...</p>
             </div>
         </div>
         <div class="bottom">
             <div class="weather-info">
                 <div style="display: grid;">
-                    <p id="temp">Temperature:0</p>
-                    <p id="wind">Wind: 0</p>
-                    <p id="humidity">Humidity: 0</p>
+                    <p id="wind">Wind: ...</p>
+                    <p id="humidity">Humidity: ...</p>
                 </div>
             </div>
         </div>
