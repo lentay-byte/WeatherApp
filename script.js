@@ -30,8 +30,6 @@ const updateDisplay = (data, state) => {
   const wind = document.querySelector('#wind');
   const humidity = document.querySelector('#humidity');
 
-  const temp_measurement = document.querySelector('#tempMeasurement');
-
   //update elements 
   locationHeader.innerHTML = data.lname;
 
@@ -49,8 +47,10 @@ const updateDisplay = (data, state) => {
 
 //changes the measurement 
 let isfarenheit = true;
-const button = document.querySelector('.slider')
-button.onclick = ()=>{
+const slider = document.querySelector('.slider')
+
+
+slider.onclick = async ()=>{
   isfarenheit = !isfarenheit;
 
   //changes the measurement symbol
@@ -59,15 +59,27 @@ button.onclick = ()=>{
   }else{
     document.querySelector('#tempMeasurement').innerHTML = '&degC'
   }
+
+  //checks if a location was already selected and changes the information if the mearsure is changed 
+  const locationHeader = document.querySelector('.location-header')
+
+  
+  if(locationHeader.textContent != '...'){
+    const info = await getWeatherData(locationHeader.textContent)
+    updateDisplay(info, isfarenheit);
+    
+  }
 }
 
 
 
-//displays the information
+//function to display based on location
 const update = async () =>{
+
   const input = await getInput();
   const info = await getWeatherData(input)
   updateDisplay(info, isfarenheit);
+  
 }
 
 //runs the update function everytime the information clicked

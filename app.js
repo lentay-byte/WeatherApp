@@ -54,8 +54,6 @@ const getWeatherData = async location => {
                 humidity: currentWeather.humidity
             }
 
-            console.log(info)
-
             return info; 
         }
 
