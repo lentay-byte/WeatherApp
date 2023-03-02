@@ -27,8 +27,8 @@ const updateDisplay = (data, state) => {
   const locationHeader = document.querySelector('.location-header');
   const temperature = document.querySelector('#tempVal');
   const condition = document.querySelector('#condition');
-  const wind = document.querySelector('#wind');
-  const humidity = document.querySelector('#humidity');
+  const wind = document.querySelector('#windVal');
+  const humidity = document.querySelector('#humidityVal');
 
   //update elements 
   locationHeader.innerHTML = data.lname;
@@ -40,8 +40,8 @@ const updateDisplay = (data, state) => {
   }
   
   condition.innerHTML = data.condition;
-  wind.innerHTML = `Wind: ${data.wind}`
-  humidity.innerHTML = `Humidity: ${data.humidity}`
+  wind.innerHTML = data.wind
+  humidity.innerHTML = data.humidity
   
 }
 

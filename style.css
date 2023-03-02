@@ -157,7 +157,14 @@ p, h1, h2, h3, h4{
 }
 
 .weather-info div p{
-    padding: 5px;
+    padding-left: 3px;
+    padding-right: 1px;
 }
+
+
+.info-container {
+    justify-content: space-around;
+}
+
 
 

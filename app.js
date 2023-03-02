@@ -62,5 +62,4 @@ const getWeatherData = async location => {
     }
 }
 
-//console.log(getWeatherData('New York'))
 export {getWeatherData, currentDate}
