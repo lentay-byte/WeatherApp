@@ -12,7 +12,6 @@ const currentDate = () => {
     const day = d.getDate()
 
     const info = {weekday, month, day}
-
     return(info)
 }
 

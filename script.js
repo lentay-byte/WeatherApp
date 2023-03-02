@@ -11,8 +11,6 @@ const showDate = dateInfo => {
 
 showDate(currentDate())
 
-//change temperature measurement 
-
 
 //gets user input 
 const getInput = () => {
@@ -32,22 +30,46 @@ const updateDisplay = (data, state) => {
   const wind = document.querySelector('#wind');
   const humidity = document.querySelector('#humidity');
 
+  const temp_measurement = document.querySelector('#tempMeasurement');
+
   //update elements 
-  
+  if(state){
   locationHeader.innerHTML = data.lname;
   temperature.innerHTML = Math.trunc(data.tempf)
   condition.innerHTML = data.condition;
   wind.innerHTML = `Wind: ${data.wind}`
   humidity.innerHTML = `Humidity: ${data.humidity}`
+  }else{
+  locationHeader.innerHTML = data.lname;
+  temperature.innerHTML = Math.trunc(data.tempc)
+  condition.innerHTML = data.condition;
+  wind.innerHTML = `Wind: ${data.wind}`
+  humidity.innerHTML = `Humidity: ${data.humidity}`
+  }
   
 }
+
+//changes the measurement 
+let isfarenheit = true;
+const button = document.querySelector('.slider')
+button.onclick = ()=>{
+  isfarenheit = !isfarenheit;
+
+  //changes the measurement symbol
+  if(isfarenheit){
+    document.getElementById('tempMeasurement').innerHTML = '&degF'
+  }else{
+    document.querySelector('#tempMeasurement').innerHTML = '&degC'
+  }
+}
+
 
 
 //displays the information
 const update = async () =>{
   const input = await getInput();
   const info = await getWeatherData(input)
-  updateDisplay(info);
+  updateDisplay(info, isfarenheit);
 }
 
 //runs the update function everytime the information clicked
