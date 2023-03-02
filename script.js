@@ -12,9 +12,7 @@ const showDate = dateInfo => {
 showDate(currentDate())
 
 //change temperature measurement 
-const toggleMeasurement = () => {
-    document.querySelector()
-}
+
 
 //gets user input 
 const getInput = () => {
@@ -27,22 +25,25 @@ const getInput = () => {
 }
 
 //update the display 
-const updateDisplay = data => {
+const updateDisplay = (data, state) => {
   const locationHeader = document.querySelector('.location-header');
   const temperature = document.querySelector('#tempVal');
   const condition = document.querySelector('#condition');
   const wind = document.querySelector('#wind');
   const humidity = document.querySelector('#humidity');
 
+  //update elements 
+  
   locationHeader.innerHTML = data.lname;
+  temperature.innerHTML = Math.trunc(data.tempf)
   condition.innerHTML = data.condition;
-  temperature.innerHTML = `${Math.trunc(data.temp)}`
   wind.innerHTML = `Wind: ${data.wind}`
   humidity.innerHTML = `Humidity: ${data.humidity}`
-
+  
 }
 
-//updates information in the DOM based on the user's input 
+
+//displays the information
 const update = async () =>{
   const input = await getInput();
   const info = await getWeatherData(input)
@@ -51,3 +52,4 @@ const update = async () =>{
 
 //runs the update function everytime the information clicked
 document.getElementById('go').addEventListener('click', update);
+

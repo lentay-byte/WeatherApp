@@ -49,10 +49,13 @@ const getWeatherData = async location => {
             const info = {
                 lname : area.name,
                 condition : currentWeather.condition.text,
-                temp : currentWeather.temp_f,
+                tempf : currentWeather.temp_f,
+                tempc : currentWeather.temp_c,
                 wind : currentWeather.wind_mph,
                 humidity: currentWeather.humidity
             }
+
+            console.log(info)
 
             return info; 
         }
