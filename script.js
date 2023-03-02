@@ -33,19 +33,17 @@ const updateDisplay = (data, state) => {
   const temp_measurement = document.querySelector('#tempMeasurement');
 
   //update elements 
+  locationHeader.innerHTML = data.lname;
+
   if(state){
-  locationHeader.innerHTML = data.lname;
-  temperature.innerHTML = Math.trunc(data.tempf)
-  condition.innerHTML = data.condition;
-  wind.innerHTML = `Wind: ${data.wind}`
-  humidity.innerHTML = `Humidity: ${data.humidity}`
+    temperature.innerHTML = Math.trunc(data.tempf)
   }else{
-  locationHeader.innerHTML = data.lname;
-  temperature.innerHTML = Math.trunc(data.tempc)
+    temperature.innerHTML = Math.trunc(data.tempc)
+  }
+  
   condition.innerHTML = data.condition;
   wind.innerHTML = `Wind: ${data.wind}`
   humidity.innerHTML = `Humidity: ${data.humidity}`
-  }
   
 }
 
