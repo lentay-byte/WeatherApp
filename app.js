@@ -1,5 +1,5 @@
 const weatherAPI = '612a16667ed94d058ba195508232202';
-const baseURL = 'http://api.weatherapi.com/v1'
+const baseURL = 'https://api.weatherapi.com/v1'
 //http://api.weatherapi.com/v1/current.json?key=612a16667ed94d058ba195508232202&q=New York&aqi=yes
 
 //gets the current day 
